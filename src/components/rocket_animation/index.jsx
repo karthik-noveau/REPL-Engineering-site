@@ -75,7 +75,9 @@ export const RocketAnimation = () => {
           {isVisible && (
             <>
               <span className={styles.partMentionContainer}>
-                <span className={`${styles.arrow}`}></span>
+                <span className={`${styles.arrow_container}`}>
+                  <span className={styles.inner_arrow}></span>
+                </span>
                 <span className={styles.circleContainer}>
                   <span className={`${styles.cricle} ${styles.circle1}`}></span>
                   <span className={`${styles.cricle} ${styles.circle3}`}></span>

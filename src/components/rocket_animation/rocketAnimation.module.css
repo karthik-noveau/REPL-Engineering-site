@@ -58,15 +58,44 @@
   right: 7px;
 }
 
-.arrow {
+.arrow_container {
   position: absolute;
-  top: 1px;
   height: 86px;
   width: 80px;
-  border-left: 2px dashed;
-  border-top: 1.6px dashed;
-  border-color: var(--sui-color-blue-300);
+  top: 1px;
   transform: skew(317deg);
+  transition: 0.1ms;
+}
+.inner_arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  border-color: var(--sui-color-blue-300);
+  animation: arrow_flow 3s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow_flow {
+  0% {
+    height: 0%;
+    width: 0%;
+  }
+  25% {
+    height: 100%;
+    width: 100%;
+  }
+  60% {
+    border-left: 2px dashed var(--sui-color-blue-300);
+  }
+
+  100% {
+    height: 100%;
+    width: 100%;
+    border-left: 2px dashed var(--sui-color-blue-300);
+    border-top: 1.6px dashed var(--sui-color-blue-300);
+  }
 }
 
 .highlightedPartName {
